@@ -1,3 +1,13 @@
+// ================= KAMUS SINGKATAN JURUSAN UNTUK CARD =================
+const singkatanJurusan = {
+  "Animasi": "ANM",
+  "Perhotelan": "PH",
+  "Usaha Layanan Wisata": "ULW",
+  "Desain Produksi Busana": "DPB",
+  "Kuliner": "KUL",
+  "Tata Kecantikan Kulit dan Rambut": "TKKR"
+};
+
 // ================= DATA AWAL KARYA SISWA SMKN 4 MADIUN =================
 const defaultKarya = [
   {
