@@ -14,7 +14,7 @@ const defaultKarya = [
   {
     id: 2,
     nama: "Julie Cahya Karmila",
-    jurusan: "ULW",
+    jurusan: "Usaha Layanan Wisata",
     judul: "Paket Wisata Edukasi & Budaya Madiun Raya",
     deskripsi: "Perancangan itinerary wisata 2 hari 1 malam lengkap dengan perhitungan biaya (tour quotation) dan pemanduan wisata sejarah di Kota Madiun.",
     gambar: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80",
@@ -24,14 +24,14 @@ const defaultKarya = [
   },
   {
     id: 3,
-    nama: "Dimas Arya Saputra",
-    jurusan: "DKV",
-    judul: "Rebranding Kemasan UMKM Brem Khas Madiun",
-    deskripsi: "Tugas proyek desain kemasan modern untuk membantu UMKM lokal naik kelas agar lebih menarik bagi wisatawan muda tanpa meninggalkan identitas budaya.",
-    gambar: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80",
+    nama: "Siti Rahmawati",
+    jurusan: "Desain Produksi Busana",
+    judul: "Modern Wear: Eksplorasi Tenun Lurik Nusantara",
+    deskripsi: "Perancangan pola busana prêt-à-porter modern menggunakan bahan dasar kain lurik tradisional dengan potongan asimetris yang elegan.",
+    gambar: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80",
     link: "",
-    kontak: "IG: @dimas.visual",
-    apresiasi: 31
+    kontak: "IG: @siti.fashion",
+    apresiasi: 35
   },
   {
     id: 4,
@@ -47,13 +47,24 @@ const defaultKarya = [
   {
     id: 5,
     nama: "Bagas Prakoso",
-    jurusan: "Tata Boga",
+    jurusan: "Kuliner",
     judul: "Fusion Pastry: Croissant Isi Pecel & Sambal Kacang",
     deskripsi: "Inovasi produk bakery yang memadukan teknik laminasi adonan Prancis dengan cita rasa autentik kuliner khas Madiun.",
     gambar: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80",
     link: "",
     kontak: "IG: @bagas.kitchen",
     apresiasi: 47
+  },
+  {
+    id: 6,
+    nama: "Dewi Lestari",
+    jurusan: "Tata Kecantikan Kulit dan Rambut",
+    judul: "Creative Fantasy Makeup & Traditional Hairdo",
+    deskripsi: "Penataan rambut pengantin tradisional dipadu riasan fantasi panggung dengan teknik gradasi warna yang tajam dan presisi.",
+    gambar: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80",
+    link: "",
+    kontak: "IG: @dewi.beauty",
+    apresiasi: 33
   }
 ];
 
@@ -65,8 +76,8 @@ const defaultPKL = [
     jurusan: "Animasi",
     tempat: "Studio Animasi & Visual Kreatif",
     kota: "Yogyakarta",
-    cerita: "Selama 6 bulan PKL, saya dilibatkan langsung dalam proses 3D asset modeling dan clean-up animasi. Mentornya sangat terbuka membimbing dari nol asalkan kita mau belajar dan tepat waktu.",
-    tips: "Jangan menunggu jago baru melamar. Rapikan 3-5 karya terbaikmu di Blender/Maya dalam satu link portofolio, dan tunjukkan etika komunikasi yang sopan saat wawancara."
+    cerita: "Selama 6 bulan PKL, saya dilibatkan langsung dalam proses 3D asset modeling dan clean-up animasi. Mentornya sangat terbuka membimbing dari nol asalkan kita mau belajar.",
+    tips: "Rapikan 3-5 karya terbaikmu di Blender/Maya dalam satu link portofolio, dan tunjukkan etika komunikasi yang sopan saat wawancara."
   },
   {
     id: 102,
@@ -74,26 +85,17 @@ const defaultPKL = [
     jurusan: "Perhotelan",
     tempat: "Hotel Aston Madiun",
     kota: "Madiun",
-    cerita: "Pengalaman luar biasa belajar langsung menangani tamu di bagian Front Office dan Housekeeping. Mental kerja terlatih menghadapi situasi ramai saat akhir pekan.",
-    tips: "Kuasai bahasa Inggris dasar untuk menyapa tamu, jaga penampilan (grooming) sejak hari pertama tes, dan jangan takut bertanya kepada senior."
+    cerita: "Pengalaman luar biasa belajar langsung menangani tamu di bagian Front Office dan Housekeeping. Mental kerja terlatih menghadapi situasi ramai.",
+    tips: "Kuasai bahasa Inggris dasar untuk menyapa tamu, jaga penampilan (grooming) sejak hari pertama tes."
   },
   {
     id: 103,
-    nama: "Fajar Nugroho (Alumni 2025)",
-    jurusan: "DKV",
-    tempat: "Agensi Desain & Percetakan Digital",
-    kota: "Surabaya",
-    cerita: "Di sini belajar cepat mengerjakan desain kebutuhan klien nyata, mulai dari banner event, konten media sosial, hingga persiapan file siap cetak (pre-press).",
-    tips: "Biasakan bekerja dengan manajemen layer yang rapi di Illustrator/Photoshop dan pahami ukuran cetak standar agar tidak banyak revisi."
-  },
-  {
-    id: 104,
-    nama: "Ayu Lestari (Kelas XII)",
-    jurusan: "Tata Boga",
-    tempat: "Artisan Bakery & Cafe",
+    nama: "Rian Hidayat (Alumni 2025)",
+    jurusan: "Desain Produksi Busana",
+    tempat: "Butik & Konveksi Ekspor",
     kota: "Solo",
-    cerita: "Belajar manajemen dapur profesional, menimbang bahan dengan presisi tinggi, serta menjaga kebersihan area kerja (hygiene & sanitation) di bawah tekanan jam sibuk.",
-    tips: "Siapkan fisik yang kuat karena banyak berdiri, catat setiap resep dan takaran yang diajarkan chef di buku saku kecil."
+    cerita: "Belajar memahami *tech pack*, teknik menjahit massal dengan standar industri, serta efisiensi pemotongan bahan kain agar minim sisa.",
+    tips: "Perkuat pemahaman membaca pola dasar dan ketelitian menggunakan mesin jahit high-speed."
   }
 ];
 
@@ -103,16 +105,13 @@ let pklList = JSON.parse(localStorage.getItem('smkn4_pkl')) || defaultPKL;
 
 let currentKaryaFilter = 'Semua';
 let currentSearchQuery = '';
-let currentPklFilter = 'Semua';
 
-// Simpan ke LocalStorage
 function saveData() {
   localStorage.setItem('smkn4_karya', JSON.stringify(karyaList));
   localStorage.setItem('smkn4_pkl', JSON.stringify(pklList));
   updateStats();
 }
 
-// Perbarui Angka Statistik
 function updateStats() {
   document.getElementById('stat-karya').textContent = karyaList.length;
   document.getElementById('stat-pkl').textContent = pklList.length;
@@ -173,15 +172,10 @@ function renderKarya() {
   lucide.createIcons();
 }
 
-// ================= RENDER JEJAK PKL KAKAK KELAS =================
+// ================= RENDER JEJAK PKL =================
 function renderPKL() {
   const grid = document.getElementById('pkl-grid');
-
-  const filtered = pklList.filter(item => {
-    return currentPklFilter === 'Semua' || item.jurusan === currentPklFilter;
-  });
-
-  grid.innerHTML = filtered.map(item => `
+  grid.innerHTML = pklList.map(item => `
     <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 flex flex-col justify-between">
       <div>
         <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
@@ -217,7 +211,6 @@ function renderPKL() {
   lucide.createIcons();
 }
 
-// ================= INTERAKSI & EVENT LISTENERS =================
 function beriApresiasi(id) {
   const index = karyaList.findIndex(k => k.id === id);
   if (index !== -1) {
@@ -227,7 +220,7 @@ function beriApresiasi(id) {
   }
 }
 
-// Filter Jurusan Karya
+// Filter Jurusan
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.filter-btn').forEach(b => {
@@ -242,28 +235,11 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
   });
 });
 
-// Pencarian Karya
 document.getElementById('search-karya').addEventListener('input', (e) => {
   currentSearchQuery = e.target.value.toLowerCase();
   renderKarya();
 });
 
-// Filter Jurusan PKL
-document.querySelectorAll('.pkl-filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.pkl-filter-btn').forEach(b => {
-      b.classList.remove('bg-amber-500', 'text-slate-950');
-      b.classList.add('bg-slate-800', 'text-slate-300');
-    });
-    btn.classList.remove('bg-slate-800', 'text-slate-300');
-    btn.classList.add('bg-amber-500', 'text-slate-950');
-
-    currentPklFilter = btn.dataset.pklFilter;
-    renderPKL();
-  });
-});
-
-// Modal Controls
 function openModal(id) {
   const modal = document.getElementById(id);
   modal.classList.remove('hidden');
@@ -276,7 +252,6 @@ function closeModal(id) {
   modal.classList.remove('flex');
 }
 
-// Detail Modal Karya
 function openDetail(id) {
   const item = karyaList.find(k => k.id === id);
   if (!item) return;
@@ -314,7 +289,6 @@ function openDetail(id) {
   lucide.createIcons();
 }
 
-// Submit Form Unggah Karya
 document.getElementById('form-karya').addEventListener('submit', function(e) {
   e.preventDefault();
   
@@ -354,7 +328,6 @@ document.getElementById('form-karya').addEventListener('submit', function(e) {
   }
 });
 
-// Submit Form Pengalaman PKL
 document.getElementById('form-pkl').addEventListener('submit', function(e) {
   e.preventDefault();
 
@@ -375,7 +348,6 @@ document.getElementById('form-pkl').addEventListener('submit', function(e) {
   closeModal('modal-pkl');
 });
 
-// Jalankan Render Awal saat Halaman Dimuat
 document.addEventListener('DOMContentLoaded', () => {
   updateStats();
   renderKarya();
