@@ -115,6 +115,7 @@ let pklList = JSON.parse(localStorage.getItem('smkn4_pkl')) || defaultPKL;
 
 let currentKaryaFilter = 'Semua';
 let currentSearchQuery = '';
+let currentPklFilter = 'Semua'; // State filter PKL yang baru ditambahkan
 
 function saveData() {
   localStorage.setItem('smkn4_karya', JSON.stringify(karyaList));
@@ -123,14 +124,17 @@ function saveData() {
 }
 
 function updateStats() {
-  document.getElementById('stat-karya').textContent = karyaList.length;
-  document.getElementById('stat-pkl').textContent = pklList.length;
+  const elKarya = document.getElementById('stat-karya');
+  const elPkl = document.getElementById('stat-pkl');
+  if (elKarya) elKarya.textContent = karyaList.length;
+  if (elPkl) elPkl.textContent = pklList.length;
 }
 
 // ================= RENDER ETALASE KARYA =================
 function renderKarya() {
   const grid = document.getElementById('karya-grid');
   const emptyState = document.getElementById('karya-empty');
+  if (!grid) return;
 
   const filtered = karyaList.filter(item => {
     const matchJurusan = currentKaryaFilter === 'Semua' || item.jurusan === currentKaryaFilter;
@@ -142,11 +146,11 @@ function renderKarya() {
 
   if (filtered.length === 0) {
     grid.innerHTML = '';
-    emptyState.classList.remove('hidden');
+    if (emptyState) emptyState.classList.remove('hidden');
     return;
   }
 
-  emptyState.classList.add('hidden');
+  if (emptyState) emptyState.classList.add('hidden');
   grid.innerHTML = filtered.map(item => {
     const kodeJurusan = singkatanJurusan[item.jurusan] || item.jurusan;
     return `
@@ -188,10 +192,57 @@ function renderKarya() {
 // ================= RENDER JEJAK PKL =================
 function renderPKL() {
   const grid = document.getElementById('pkl-grid');
-  grid.innerHTML = pklList.map(item => {
+  if (!grid) return;
+
+  const filtered = pklList.filter(item => {
+    return currentPklFilter === 'Semua' || item.jurusan === currentPklFilter;
+  });
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="col-span-2 text-center py-10 text-slate-400 text-sm">Belum ada ulasan PKL untuk jurusan ini. Jadilah yang pertama membagikan pengalaman!</div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(item => {
     const kodeJurusan = singkatanJurusan[item.jurusan] || item.jurusan;
     return `
       <div class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 flex flex-col justify-between">
         <div>
           <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <span class="px-3 py-1 rounded-lg text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-50
+            <span class="px-3 py-1 rounded-lg text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">
+              ${kodeJurusan}
+            </span>
+            <span class="inline-flex items-center gap-1 text-xs font-semibold text-slate-400">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-amber-400"></i>
+              ${item.kota}
+            </span>
+          </div>
+
+          <h3 class="font-display text-lg font-bold text-white">${item.tempat}</h3>
+          <p class="text-xs text-amber-400 font-semibold mt-0.5">Oleh: ${item.nama}</p>
+
+          <p class="text-sm text-slate-300 mt-3.5 leading-relaxed">
+            "${item.cerita}"
+          </p>
+        </div>
+
+        <div class="mt-5 p-4 rounded-xl bg-amber-500/10 border border-amber-500/25">
+          <div class="flex items-center gap-1.5 text-xs font-bold text-amber-300 mb-1">
+            <i data-lucide="lightbulb" class="w-4 h-4"></i>
+            Tips Lolos & Persiapan Adik Kelas:
+          </div>
+          <p class="text-xs text-slate-200 leading-relaxed">
+            ${item.tips}
+          </p>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  lucide.createIcons();
+}
+
+function beriApresiasi(id) {
+  const index = karyaList.findIndex(k => k.id === id);
+  if (index !== -1) {
+    karyaList[index].apresiasi += 1;
